@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-xl border border-blue-500/15 rounded-2xl;
+}
+
+.text-glow-pink {
+  /* Kept for backward-compatibility; now uses blue glow */
+  text-shadow: 0 0 18px rgba(37, 99, 235, 0.85);
+}
+
+.text-glow-purple {
+  /* Kept for backward-compatibility; now uses red glow */
+  text-shadow: 0 0 18px rgba(220, 38, 38, 0.7);
+}
+
+.btn-primary {
+  @apply relative inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-semibold tracking-wide text-white transition duration-300;
+  background: radial-gradient(circle at top left, #2563EB, #DC2626);
+  box-shadow: 0 0 22px rgba(37, 99, 235, 0.55), 0 0 36px rgba(220, 38, 38, 0.35);
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(circle at top left, #ffffff, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover::after {
+  opacity: 0.35;
+}
+
+.section-wrapper {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.starry-bg {
+  background-image: radial-gradient(circle at 1px 1px, #ffffff33 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
